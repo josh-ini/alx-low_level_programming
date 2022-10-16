@@ -1,23 +1,26 @@
 #include <stdio.h>
 
 /**
- * main - combination
- * Return: Always 0
+ *main-program entry point.
+ *Return:0 success, non zero error.
  */
 int main(void)
 {
-	int n;
+	int num;
 
-
-	for (n = 48; n < 58; n++)
+	for (num = '0'; num <= '9'; num++)
 	{
-		putchar(n);
-		if (n != 57)
+		putchar(num);
+		if (num == '9')
+		{
+			break;
+		}
+		else
 		{
 			putchar(',');
 			putchar(' ');
 		}
-		putchar('\n');
 	}
-		return (0);
+	putchar('\n');
+	return (0);
 }
