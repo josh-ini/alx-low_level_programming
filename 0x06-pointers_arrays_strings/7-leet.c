@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * leet - encides a string
+ * leet - encodes a string into 1337
  * @n: input
  * Return: the value of n
  */
