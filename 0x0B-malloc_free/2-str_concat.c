@@ -1,40 +1,34 @@
 #include "main.h"
 #include <stdlib.h>
 /**
- * str_concat - a function that concatenates two strings
- * @s1: input
- * @s2: input
- * Return: concat of s1 and s2
+ * str_concat - concatenates two strings.
+ * @s1: first string
+ * @s2: second string
+ * Return: strout
  */
 char *str_concat(char *s1, char *s2)
 {
-	char *concat;
-	int i, ci;
+	char *strout;
+	unsigned int i, j, k, limit;
 
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
-
-	i = ci = 0;
-	while (s1[i] != '\0')
-		i++;
-	while (s2[ci] != '\0')
-		ci++;
-	concat = malloc(sizeof(char) * (i + ci + 1));
-
-	if (concat == NULL)
+	for (i = 0; s1[i] != '\0'; i++)
+		;
+	for (j = 0; s2[j] != '\0'; j++)
+		;
+	strout = malloc(sizeof(char) * (i + j + 1));
+	if (strout == NULL)
+	{
+		free(strout);
 		return (NULL);
-	i = ci = 0;
-	while (s1[i] != '\0')
-	{
-		concat[i] = s1[i];
-		i++;
 	}
-
-	while (s2[ci] != '\0')
-	{
-		concat[i] = s2[ci];
-		i++, ci++;
-	}
-}	
+	for (k = 0; k < i; k++)
+		strout[k] = s1[k];
+	limit = j;
+	for (j = 0; j <= limit; k++, j++)
+		strout[k] = s2[j];
+	return (strout);
+}
