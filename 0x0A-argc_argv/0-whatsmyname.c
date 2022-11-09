@@ -1,8 +1,8 @@
 #include <stdio.h>
 /**
  * main-returns the name of a program
- * @argc: length of array
- * @argv: members of the array
+ * @argc: length of arrays
+ * @argv: member of the arrays
  * Return: success
  */
 int main(int argc __attribute__((unused)), char *argv[])
