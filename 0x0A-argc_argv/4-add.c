@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <ctype.h>
 /**
- * main - program that adds positive numbers
+ * main - program that add positive numbers
  * @argc: length of the arguments
  * @argv: arguments passed
  * Return: suceess
