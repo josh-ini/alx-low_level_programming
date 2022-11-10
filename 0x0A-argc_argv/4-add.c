@@ -1,28 +1,34 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <ctype.h>
+
 /**
- * main - program that add positive numbers
- * @argc: length of the arguments
- * @argv: arguments passed
- * Return: suceess
+ * main - Prints the addition of positive numbers,
+ *        followed by a new line.
+ * @argc: The number of arguments passed to the program.
+ * @argv: An array of pointers to the arguments.
+ *
+ * Return: If one of the numbers contains symbols that are non-digits - 1.
+ *         Otherwise - 0.
  */
 int main(int argc, char *argv[])
 {
-	int i, j, add = 0;
+	int num, digit, sum = 0;
 
-	for (j = 1; j < argc; j++)
+	for (num = 1; num < argc; num++)
 	{
-		for (i = 0; argv[j][i] != '\0'; i++)
+		for (digit = 0; argv[num][digit]; digit++)
 		{
-			if (!isdigit(argv[j]))
+			if (argv[num][digit] < '0' || argv[num][digit] > '9')
 			{
 				printf("Error\n");
 				return (1);
 			}
 		}
-		add += atoi(argv[j]);
+
+		sum += atoi(argv[num]);
 	}
-	printf("%d\n", add);
+
+	printf("%d\n", sum);
+
 	return (0);
 }
