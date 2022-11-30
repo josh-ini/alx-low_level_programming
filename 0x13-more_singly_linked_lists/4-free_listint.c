@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * free_listint - adds a new node at the end of the list_t list
+ * free_listint - add a new node at the end of the list_t list
  * @head: pointer to list
  *
  * Return: void

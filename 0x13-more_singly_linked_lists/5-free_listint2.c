@@ -2,7 +2,7 @@
 
 /**
  * free_listint2 - free list
- * @head: pointer to list
+ * @head: point to list
  *
  * Return: void
  */
