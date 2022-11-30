@@ -1,3 +1,30 @@
+#include "lists.h"
+
+void free_listp(listptr_t **head);
+
+/**
+ * print_listint_safe - prints a list
+ * @head: the list
+ *
+ * Return: number of nodes
+ */
+size_t print_listint_safe(const listint_t *head)
+{
+	size_t num_nodes = 0;
+	listptr_t *hptr, *new, *add;
+
+	hptr = NULL;
+	while (head != NULL)
+	{
+		new = malloc(sizeof(listptr_t));
+
+		if (new == NULL)
+			exit(98);
+
+		new->p = (void *)head;
+		new->next = hptr;
+		hptr = new;
+
 		add = hptr;
 
 		while (add->next != NULL)
