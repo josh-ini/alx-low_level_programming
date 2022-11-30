@@ -3,7 +3,7 @@
 void free_listp(listptr_t **head);
 
 /**
- * print_listint_safe - prints a list
+ * print_listint_safe - print a list
  * @head: the list
  *
  * Return: number of nodes
