@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
- * insert_nodeint_at_index - puts a nose at a particular point
+ * insert_nodeint_at_index - put a nose at a particular point
  * @head: the list
  * @idx: the location to add the node
  * @n: the number to insert at that node
